@@ -1,0 +1,20 @@
+header{
+    text-align: center;
+    #menu{
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            li{
+                list-style: none;
+                text-decoration: none;
+                padding: 20px;
+                color: darkblue;
+                &:hover{
+                    background-color: lightblue;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

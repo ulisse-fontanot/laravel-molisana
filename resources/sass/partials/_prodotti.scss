@@ -1,0 +1,23 @@
+section#container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    #prodotto{
+        width: calc(100% / 3);
+        img{
+            width: 100%;
+        }
+        #layover{
+            display: none;
+            width: 100%;
+            &:hover{
+                background-color: darkcyan;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}
