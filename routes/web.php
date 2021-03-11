@@ -42,7 +42,14 @@ Route::get('/prodotti', function () {
 
 Route::get('/dettagli/{index}', function ($index) {
     $pasta = config('pasta');
-    $prodotto = $pasta[$index];
-    $data = ['prodotti' => $prodotto];
-    return view('dettagli', $data);
+
+    if (is_numeric($index) && $index >= 0 && $index < count($pasta)) {
+        $prodotto = $pasta[$index];
+        $data = ['prodotti' => $prodotto];
+        return view('dettagli', $data);
+    } else {
+        abort('404');
+    }
+
+    
 })->name('pagina-dettagli');
