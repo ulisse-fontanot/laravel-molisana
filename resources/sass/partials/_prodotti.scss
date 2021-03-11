@@ -1,23 +1,36 @@
-section#container{
+#container{
     width: 80%;
     margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    #prodotto{
+    a{
         width: calc(100% / 3);
-        img{
+        #prodotto{
             width: 100%;
-        }
-        #layover{
-            display: none;
-            width: 100%;
-            &:hover{
+            position: relative;
+            padding: 10px;
+            img{
+                width: 100%;
+            }
+            #layover{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                width: 100%;
+                height: 100%;
+            }
+            &:hover #layover{
+                z-index: 5;
                 background-color: darkcyan;
+                color: white;
                 display: flex;
                 align-items: center;
-                text-align: center;
+                justify-content: center;
+                cursor: pointer;
             }
         }
     }
+    
 }
