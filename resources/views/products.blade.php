@@ -3,16 +3,21 @@
 @section('title', 'sezione prodotti')
 
 @section('content')
-    <section id="container">
-        @foreach($prodotti as $key => $prodotto)
-            <a href="{{ route('pagina-dettagli', ['index' => $key])}}">
-                <div id="prodotto">
-                    <img src="{{ $prodotto['src'] }}" alt="{{ $prodotto['titolo'] }}">
-                    <div id="layover">
-                        <h2>{{ $prodotto['titolo'] }}</h2>
-                    </div>
-                </div>
-            </a>
+    <div id="container">
+        @foreach($prodotti as $tipo => $prodotto)
+            <h2>{{ $tipo }}</h2>
+            <section id="container-prodotto">
+                @foreach($prodotto as $key => $pasta)
+                    <a href="{{ route('pagina-dettagli', ['index' => $key])}}">
+                        <div id="pasta">
+                            <img src="{{ $pasta['src'] }}" alt="{{ $pasta['titolo'] }}">
+                            <div id="layover">
+                                <h2>{{ $pasta['titolo'] }}</h2>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
+            </section>
         @endforeach
-    </section>
+    </div>
 @endsection

@@ -1,0 +1,23 @@
+#dettaglio{
+    display: flex;
+    flex-direction: column;
+    #specifiche{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgb(184,218,228);
+        padding: 20px;
+        h2{
+            padding: 20px;
+        }
+        h2:nth-child(2){
+            border-right: 2px solid darkblue;
+            border-left: 2px solid darkblue;
+        }
+    }
+    p{
+        background-color: rgb(184,218,228);
+        padding: 20px 200px;
+        font-size: 20px;
+    }
+}

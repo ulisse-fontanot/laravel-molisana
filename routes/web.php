@@ -23,7 +23,20 @@ Route::get('/notizie', function () {
 
 Route::get('/prodotti', function () {
     $pasta = config('pasta');
-    $data = ['prodotti' => $pasta];
+
+    $collPasta = collect($pasta);
+
+    $filter_lunga = $collPasta->where('tipo', 'lunga');
+    $filter_corta = $collPasta->where('tipo', 'corta');
+    $filter_cortissima = $collPasta->where('tipo', 'cortissima');
+
+    $data = [
+        'prodotti' => [
+            'lunga' => $filter_lunga,
+            'corta' => $filter_corta,
+            'cortissima' => $filter_cortissima
+        ]
+    ];
     return view('products', $data);
 })->name('pagina-prodotti');
 

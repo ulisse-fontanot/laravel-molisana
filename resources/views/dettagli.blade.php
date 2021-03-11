@@ -9,7 +9,7 @@
         <div id="specifiche">
             <h2>{{ $prodotti['titolo'] }}</h2>
             <h2>TEMPO DI COTTURA: {{ $prodotti['cottura'] }}</h2>
-            <h2>{{ $prodotti['peso'] }}</h2>
+            <h2>PESO: {{ $prodotti['peso'] }}</h2>
         </div>
         <p>{{ $prodotti['descrizione'] }}</p>
     </section>

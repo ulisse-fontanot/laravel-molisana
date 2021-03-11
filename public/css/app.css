@@ -33,26 +33,33 @@ footer img {
 #container {
   width: 80%;
   margin: auto;
+}
+
+#container h2 {
+  text-align: center;
+}
+
+#container #container-prodotto {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-#container a {
+#container #container-prodotto a {
   width: calc(100% / 3);
 }
 
-#container a #prodotto {
+#container #container-prodotto a #pasta {
   width: 100%;
   position: relative;
   padding: 10px;
 }
 
-#container a #prodotto img {
+#container #container-prodotto a #pasta img {
   width: 100%;
 }
 
-#container a #prodotto #layover {
+#container #container-prodotto a #pasta #layover {
   position: absolute;
   top: 0;
   left: 0;
@@ -61,7 +68,7 @@ footer img {
   height: 100%;
 }
 
-#container a #prodotto:hover #layover {
+#container #container-prodotto a #pasta:hover #layover {
   z-index: 5;
   background-color: darkcyan;
   color: white;
@@ -69,5 +76,33 @@ footer img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+#dettaglio {
+  display: flex;
+  flex-direction: column;
+}
+
+#dettaglio #specifiche {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #b8dae4;
+  padding: 20px;
+}
+
+#dettaglio #specifiche h2 {
+  padding: 20px;
+}
+
+#dettaglio #specifiche h2:nth-child(2) {
+  border-right: 2px solid darkblue;
+  border-left: 2px solid darkblue;
+}
+
+#dettaglio p {
+  background-color: #b8dae4;
+  padding: 20px 200px;
+  font-size: 20px;
 }
 

@@ -1,36 +1,42 @@
 #container{
     width: 80%;
     margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    a{
-        width: calc(100% / 3);
-        #prodotto{
-            width: 100%;
-            position: relative;
-            padding: 10px;
-            img{
+    h2{
+        text-align: center;
+    }
+    #container-prodotto{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        a{
+            width: calc(100% / 3);
+            #pasta{
                 width: 100%;
-            }
-            #layover{
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: none;
-                width: 100%;
-                height: 100%;
-            }
-            &:hover #layover{
-                z-index: 5;
-                background-color: darkcyan;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
+                position: relative;
+                padding: 10px;
+                img{
+                    width: 100%;
+                }
+                #layover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                }
+                &:hover #layover{
+                    z-index: 5;
+                    background-color: darkcyan;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
             }
         }
+        
     }
-    
 }
+
